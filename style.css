@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.stage {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doll {
+    position: relative;
+    width: 50px;
+    height: 150px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    animation: dance 3s ease-in-out infinite paused;
+}
+
+.head {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.body {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    width: 40px;
+    height: 80px;
+    background-color: #ff6600;
+    border-radius: 10px;
+}
+
+.arms {
+    position: absolute;
+    top: 40px;
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arm-left, .arm-right {
+    width: 10px;
+    height: 60px;
+    background-color: #ffcc99;
+    border-radius: 5px;
+}
+
+.legs {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leg-left, .leg-right {
+    width: 10px;
+    height: 60px;
+    background-color: #ffcc99;
+    border-radius: 5px;
+}
+
+/* Dance Animation */
+@keyframes dance {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
